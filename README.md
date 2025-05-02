@@ -1,4 +1,4 @@
-# 🏥 Pharmacy Supply System
+# 🏥 Pharmacy Supply System (website)
 
 This is a web-based Pharmacy Management System designed to simplify the process of purchasing medicine and managing pharmacy operations. Built with PHP and MySQL, this system allows users to browse medicines, manage their cart, and place orders, while administrators can manage inventory and orders.
 
