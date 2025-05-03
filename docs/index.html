@@ -12,37 +12,83 @@
       padding: 20px;
       background-color: #f7f9fc;
     }
+
+    /* Header fade-in animation */
     header {
       background-color: #0066cc;
       color: white;
       padding: 20px;
       text-align: center;
+      animation: fadeIn 2s ease-in-out;
     }
+
+    /* Section slide-in animation */
     section {
       background: white;
       margin: 20px 0;
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateX(-100%);
+      animation: slideIn 1.5s forwards ease-out;
     }
+
+    section:nth-child(2) {
+      animation-delay: 0.5s;
+    }
+    section:nth-child(3) {
+      animation-delay: 1s;
+    }
+    section:nth-child(4) {
+      animation-delay: 1.5s;
+    }
+
+    /* Fade-in animation for the header */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Slide-in animation for sections */
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
     h1, h2 {
       margin-top: 0;
     }
+
     a {
       color: #0066cc;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
     }
+
     a:hover {
       text-decoration: underline;
+      color: #004499;
+    }
+
+    /* Pointer event fix */
+    * {
+      pointer-events: auto !important;
     }
   </style>
-<style>
-  * {
-    pointer-events: auto !important;
-  }
-</style>
-
 </head>
 <body>
 
@@ -57,14 +103,13 @@
   </section>
 
   <section>
-  <h2>📂 GitHub Repository</h2>
-  <p>
-    <a href="https://github.com/virajtamhanekar/Pharmacy-Supply-System-website" target="_blank" style="position: relative; z-index: 2;">
-      🔗 View Source Code on GitHub
-    </a>
-  </p>
-</section>
-
+    <h2>📂 GitHub Repository</h2>
+    <p>
+      <a href="https://github.com/virajtamhanekar/Pharmacy-Supply-System-website" target="_blank">
+        🔗 View Source Code on GitHub
+      </a>
+    </p>
+  </section>
 
   <section>
     <h2>🚀 How to Run</h2>
@@ -83,3 +128,4 @@
 
 </body>
 </html>
+
